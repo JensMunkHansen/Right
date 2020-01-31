@@ -3,4 +3,7 @@ project(Right)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-add_subdirectory(src)
+#add_subdirectory(src)
+
+add_subdirectory(VideoCapture)
+add_subdirectory(VideoTest)

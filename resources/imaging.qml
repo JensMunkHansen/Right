@@ -23,8 +23,8 @@ Window {
             Row {
                 id: toolBar
                 width: parent.width
-                height: max(btnStageAcq.height,
-                            btnStageImage.height)
+                height: Math.max(btnStageAcq.height,
+                                btnStageImage.height)
                 spacing: 1
                 ButtonGroup {
                     id: btnStageGroup
@@ -65,7 +65,7 @@ Window {
             Layout.alignment: Qt.AlignTop | Qt.AlignLeft
             RowLayout {
                 anchors.fill: parent
-                spacing: 6
+                spacing: 0
                 Rectangle {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -145,7 +145,7 @@ Window {
                     border.color: "black"
                     border.width: 1                
                     ColumnLayout {
-                        spacing: 6
+                        spacing: 0
                         anchors.fill: parent
                         Layout.alignment: Qt.AlignTop
                         Layout.fillHeight: true
