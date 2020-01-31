@@ -80,7 +80,7 @@ Window {
                                 border.width: 1
                                 height: parent.height
                                 Text {
-                                    text: "Color and overlay parameters visualized + preset"
+                                    text: "Control Panel"
                                     anchors.centerIn: parent
                                 }
                             }
@@ -136,6 +136,11 @@ Window {
                         anchors.centerIn: parent
                         text: "4D view"
                     }
+                    Text {
+                        id: txtMR4D
+                        anchors.bottom: parent.bottom
+                        text: "MR - 3 weeks ago"
+                    }
                 }
                 Rectangle {
                     Layout.fillWidth: true
@@ -162,6 +167,15 @@ Window {
                             }
                             border.color: "black"
                             border.width: 1
+                            Text {
+                                id: txtMR2DSagittal
+                                anchors.bottom: parent.bottom
+                                text: "MR - 3 weeks ago"
+                            }
+                            Text {
+                                anchors.bottom: txtMR2DSagittal.top
+                                text: "CT - 4 weeks ago"
+                            }
                         }
                         Rectangle {
                             Layout.alignment: Qt.AlignMiddle | Qt.AlignHCenter
@@ -175,8 +189,18 @@ Window {
                             }
                             border.color: "black"
                             border.width: 1
+                            Text {
+                                id: txtMR2DCoronal
+                                anchors.bottom: parent.bottom
+                                text: "MR - 3 weeks ago"
+                            }
+                            Text {
+                                anchors.bottom: txtMR2DCoronal.top
+                                text: "CT - 4 weeks ago"
+                            }
                         }
                         Rectangle {
+                            id: rect2DAxial
                             Layout.fillHeight: true
                             Layout.fillWidth: true
                             Layout.alignment: Qt.AlignBottom | Qt.AlignHCenter
@@ -188,12 +212,25 @@ Window {
                             }
                             border.color: "black"
                             border.width: 1
+                            Text {
+                                id: txtMR2DAxial
+                                anchors.bottom: parent.bottom
+                                text: "MR - 3 weeks ago"
+                            }
+                            Text {
+                                anchors.bottom: txtMR2DAxial.top
+                                text: "CT - 4 weeks ago"
+                            }
                         }
+
                     }
                 }
             }
         }
     }
+
+
+
 
     Component {
         id: tabViewStyle
